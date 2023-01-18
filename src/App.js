@@ -1,5 +1,4 @@
-import "./App.css";
-import NewUser from "./components/NewUser/NewUser";
+import AddUser from "./components/Users/AddUser";
 import Users from "./components/Users/Users";
 import React, { useState } from "react";
 
@@ -10,6 +9,11 @@ function App() {
       age: "31",
       id: "22"
     },
+    {
+      name: "Pol",
+      age: "29",
+      id: "21"
+    },
   ]);
 
   const usersHandler = (e) => {
@@ -18,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <NewUser addUser={usersHandler}/>
+      <AddUser users={addedUsers} addUser={usersHandler}/>
       <Users users={addedUsers} />
     </div>
   );
